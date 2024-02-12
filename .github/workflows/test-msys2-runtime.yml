@@ -8,10 +8,11 @@ on:
         # e.g. https://github.com/msys2/msys2-runtime/actions/runs/7865269712/artifacts/1236989688
         description: The URL to the artifacts of an msys2-runtime build
         type: string
+  push:
 
 env:
   LC_CTYPE: C.UTF-8
-  MSYS2_RUNTIME_ARTIFACT_URL: ${{ inputs.msys2-runtime-artifacts-url }}
+  MSYS2_RUNTIME_ARTIFACT_URL: ${{ inputs.msys2-runtime-artifacts-url || 'https://github.com/git-for-windows/msys2-runtime/actions/runs/12893351109/artifacts/2463422199' }}
   G4W_SDK_REPO: git-for-windows/git-sdk-64
 
 jobs:
